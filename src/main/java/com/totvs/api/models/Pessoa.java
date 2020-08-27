@@ -1,11 +1,14 @@
 package com.totvs.api.models;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Pessoa implements Serializable {
@@ -25,6 +28,13 @@ public class Pessoa implements Serializable {
 	private String salario;
 	
 	private String data_nascimento;
+	
+	@OneToMany(
+		mappedBy = "pessoa",
+		cascade = CascadeType.ALL,
+		orphanRemoval = true
+	)
+	private List<Endereco> enderecos;
 	
 	public long getId() {
 		return id;
@@ -72,5 +82,9 @@ public class Pessoa implements Serializable {
 	
 	public void setData_nascimento(String data_nascimento) {
 		this.data_nascimento = data_nascimento;
+	}
+
+	public List<Endereco> getEnderecos() {
+		return enderecos;
 	}
 }
