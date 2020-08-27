@@ -36,6 +36,13 @@ public class Pessoa implements Serializable {
 	)
 	private List<Endereco> enderecos;
 	
+	@OneToMany(
+		mappedBy = "pessoa",
+		cascade = CascadeType.ALL,
+		orphanRemoval = true
+	)
+	private List<Dependente> dependentes;
+	
 	public long getId() {
 		return id;
 	}
@@ -86,5 +93,9 @@ public class Pessoa implements Serializable {
 
 	public List<Endereco> getEnderecos() {
 		return enderecos;
+	}
+
+	public List<Dependente> getDependentes() {
+		return dependentes;
 	}
 }
