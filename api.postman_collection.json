@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "9bcc564d-1c2b-4a78-a7db-70d2147fd66c",
+		"name": "Avaliação Técnica - TOTVS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pessoas",
+			"item": [
+				{
+					"name": "Listar pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/pessoa",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar pessoa específica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/pessoa/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar pessoa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Teste\",\n    \"cpf\": \"12345678910\",\n    \"profissao\": \"Desenvolvedor Javascript\",\n    \"salario\": \"3500\",\n    \"data_nascimento\": \"1998-05-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pessoa",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar pessoa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Danilo Duarte\",\n    \"cpf\": \"12345678910\",\n    \"profissao\": \"Desenvolvedor PHP\",\n    \"salario\": \"5000\",\n    \"data_nascimento\": \"1998-05-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pessoa/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar pessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/pessoa/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Enderecos",
+			"item": [
+				{
+					"name": "Adicionar endereco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoEndereco\": \"\",\n    \"tipo\": \"\",\n    \"nome\": \"\",\n    \"numero\": \"\",\n    \"complemento\": \"\",\n    \"cep\": \"\",\n    \"bairro\": \"\",\n    \"cidade\": \"\",\n    \"estado\": \"\",\n    \"pais\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pessoa/1/endereco",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa",
+								"1",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar endereço",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoEndereco\": \"Residencial\",\n    \"tipo\": \"Travessa\",\n    \"nome\": \"Francisco bbbbbbbbb\",\n    \"numero\": 119,\n    \"complemento\": \"\",\n    \"cep\": 66070190,\n    \"bairro\": \"Marco\",\n    \"cidade\": \"Belém\",\n    \"estado\": \"Pará\",\n    \"pais\": \"Brasil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/endereco/10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"endereco",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar endereço",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/endereco/11",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"endereco",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dependente",
+			"item": [
+				{
+					"name": "Adicionar dependente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Tarrirê Haris France das Neves\",\n    \"tipo\": \"Esposa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pessoa/4/dependente",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa",
+								"4",
+								"dependente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar dependente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Tarrirê Neves\",\n    \"tipo\": \"Namorada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/dependente/3",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dependente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover dependente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/dependente/3",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"dependente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Telefone",
+			"item": [
+				{
+					"name": "Adicionar telefone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codigoPais\": 55,\n    \"ddd\": 91,\n    \"numero\": 982780151,\n    \"tipo\": \"Contato\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pessoa/4/telefone",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoa",
+								"4",
+								"telefone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar telefone",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codigoPais\": 55,\n    \"ddd\": 91,\n    \"numero\": 123456789,\n    \"tipo\": \"Contato\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/telefone/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"telefone",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover telefone",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/telefone/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"telefone",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a037b9ea-22f2-4bf1-8399-5a43749b1612",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "60210454-b7b2-4793-92e5-d52b947190f5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "894a8092-40ad-4614-b095-2d92fdff550a",
+			"key": "baseURL",
+			"value": "localhost:8080"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
