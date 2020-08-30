@@ -76,7 +76,7 @@ Para os testes foi utilizada a aplicação [Postman](https://www.postman.com/dow
 
 -   Descrição: Cadastrar endereço de uma pessoa
 
--   Endpoint: /pessoa/**id**/endereco
+-   Endpoint: /endereco/**id_endereco**
 
 ### Cadastrar dependente
 
@@ -92,7 +92,7 @@ Para os testes foi utilizada a aplicação [Postman](https://www.postman.com/dow
 
 -   Descrição: Atualizar dependente de uma pessoa
 
--   Endpoint: /pessoa/**id**/dependente
+-   Endpoint: /dependente/**id_dependente**
 
 ### Deletar dependente
 
@@ -100,7 +100,7 @@ Para os testes foi utilizada a aplicação [Postman](https://www.postman.com/dow
 
 -   Descrição: Deletar dependente de uma pessoa
 
--   Endpoint: /pessoa/**id**/dependente
+-   Endpoint: /dependente/**id_dependente**
 
 ### Cadastrar telefone
 
@@ -116,7 +116,7 @@ Para os testes foi utilizada a aplicação [Postman](https://www.postman.com/dow
 
 -   Descrição: Atualizar telefone de uma pessoa
 
--   Endpoint: /pessoa/**id**/telefone
+-   Endpoint: /telefone/**id_telefone**
 
 ### Deletar telefone
 
@@ -124,7 +124,7 @@ Para os testes foi utilizada a aplicação [Postman](https://www.postman.com/dow
 
 -   Descrição: Deletar telefone de uma pessoa
 
--   Endpoint: /pessoa/**id**/telefone
+-   Endpoint: /telefone/**id_telefone**
 
 ## :man_teacher: Desenvolvimento da aplicação
 
